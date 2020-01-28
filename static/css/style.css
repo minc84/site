@@ -1,0 +1,133 @@
+@import '../fonts/fonts.css';
+
+body{
+background-color: #e5faf4;
+z-index: 0;
+	 
+}
+
+.banner{
+background-image: url('../images/f1.png');
+background-repeat: no-repeat;
+background-size: contain; /* Масштабируем фон */
+z-index: 5;
+	
+}
+
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+.menu-bar{
+	color: #252726;/* цвет текса  */
+	padding: 5px 0;
+	
+}
+
+.menu__item{
+	margin-left: 25px;/* растояния межлу меню   https://toster.ru/q/672345*/
+}
+
+.menu__item a{
+font-family: 'AvenirNextCyr Bold';
+font-size: 20px;
+color: #252726; /* цвет текса в меню в теги а */
+}
+
+.menu__item a:hover{
+	text-decoration: none;
+	color: #868686
+}
+/* Шапка*/
+.header__title{
+	font-family:'AvenirNextCyr Demi';
+	font-size: 34px;
+	color: #feffff;
+	padding: 0px 10px 5px; 
+}
+
+.header__title1{
+	font-family:'AvenirNextCyr Demi';
+	font-size: 30px;
+	text-transform: uppercase;
+	color: #2d4461;
+	padding: 0px 10px 0px; 
+}
+
+.header__text{
+	font-family:'AvenirNextCyr Demi';
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #375376;
+	padding: 0px 5px 0px; 
+}
+
+.fon{
+background-color: #e5faf4;
+z-index: 5;
+
+}
+
+.menu__tel{
+	font-family: "Avenir Next Cyr";
+	font-size: 20px;
+	text-transform: uppercase;
+	
+	padding: 0px 10px 0px 20px;
+}
+
+.button-full{
+	font-family: "Avenir Next Cyr";
+	padding: 10px 30px;
+	margin: 0px 0px;
+	color: #ffffff;
+	background:#f1872f;
+	border-radius: 5px;
+}
+.volna{
+background-image: url('../images/volny.png');
+background-repeat: no-repeat;
+padding: 50px ;
+background-size: 100% 100%; /* Масштабируем фон */
+z-index: 5;
+
+}
+.footer{
+background-image: url('../images/f3.png');
+background-repeat: no-repeat;
+padding: 50px;
+background-size: 100% 100%; /* Масштабируем фон */
+z-index: 5;
+}
+.otziv{
+	padding: 60px;
+}
+.about{
+padding: 50px ;
+}
+.slide{
+background-repeat: no-repeat;
+background-size: auto auto; /* Масштабируем фон */
+z-index: 5;
+}
+.otziv{
+	color: black;
+	background: white;
+	text-align: center;
+	margin: 20px;
+}
+.otziv__h3{
+	font-size: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}
+
+.foot{
+	margin-top: 20px;
+}
+.foto{
+padding: 50px ;	
+}
