@@ -4,6 +4,7 @@
 {% block content %}
   <h2>Contact</h2>
  
+<<<<<<< HEAD
   {% for message in form.name.errors %}
     <div class="flash">{{ message }}</div>
   {% endfor %}
@@ -37,4 +38,46 @@
  
     {{ form.submit }}
   </form>
+=======
+  {% if success %}
+    <p>Thank you for your message. Well get back to you shortly.</p>
+ 
+  {% else %}
+ 
+    {% for message in form.name.errors %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+ 
+    {% for message in form.email.errors %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+ 
+    {% for message in form.subject.errors %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+ 
+    {% for message in form.message.errors %}
+      <div class="flash">{{ message }}</div>
+    {% endfor %}
+ 
+    <form action="{{ url_for('contact') }}" method=post>
+      {{ form.hidden_tag() }}
+ 
+      {{ form.name.label }}
+      {{ form.name }}
+ 
+      {{ form.email.label }}
+      {{ form.email }}
+ 
+      {{ form.subject.label }}
+      {{ form.subject }}
+ 
+      {{ form.message.label }}
+      {{ form.message }}
+ 
+      {{ form.submit }}
+    </form>
+ 
+  {% endif %}
+>>>>>>> 7efa1f31b51f52dfb148e2f0b06c93dcd104e866
 {% endblock %}
