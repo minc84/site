@@ -9,44 +9,61 @@ app = Flask(__name__)
 app.config.from_object(Configuration)
 app.secret_key = '1580208980-7d702e450c96ee352e41d401c014b0d07b9124de'
 
-app.config["MAIL_SERVER"] = "smtp.gmail.com"
-app.config["MAIL_PORT"] = 465
+app.config["MAIL_SERVER"] = "smtp.yandex.ru"
+app.config["MAI_PORT"] = 465
 app.config["MAIL_USE_SSL"] = True
-app.config["MAIL_USERNAME"] = 'nesterovish84@gmail.com'
-app.config["MAIL_PASSWORD"] = 'Lokomotiv1'
+app.config["MAIL_USERNAME"] = 'nesterovish@yandex.ru'
+app.config["MAIL_PASSWORD"] = 'Vitalina84'
  
 mail.init_app(app)
 
 
-@app.route('/')
-@app.route('/blog')
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('index.html')
-
-@app.route('/foto')
-def foto():
-    return render_template('foto.html')
-
-@app.route('/contact', methods=['GET', 'POST'])
-def contact():
   form = ContactForm()
  
   if request.method == 'POST':
     if form.validate() == False:
       flash('All fields are required.')
-      return render_template('contact.html', form=form)
+      return render_template('index.html', form=form)
     else:
-      msg = Message(form.subject.data, sender='contact@example.com', recipients=['nesterovish84@gmail.com'])
+      msg = Message(form.subject.data, sender='contact@example.com', recipients=['nesterovish@yandex.ru'])
       msg.body = """
       From: %s &lt;%s&gt;
       %s
       """ % (form.name.data, form.email.data, form.message.data)
       mail.send(msg)
  
-      return render_template('contact.html', success=True)
+      return render_template('index.html', success=True)
  
   elif request.method == 'GET':
-    return render_template('contact.html', form=form)
+    return render_template('index.html', form=form)
+
+@app.route('/foto', methods = ['GET', 'POST'])
+def foto():
+  form = ContactForm()
+ 
+  if request.method == 'POST':
+    if form.validate() == False:
+      flash('All fields are required.')
+      return render_template('foto.html', form=form)
+    else:
+      msg = Message(form.subject.data, sender='contact@example.com', recipients=['nesterovish@yandex.ru'])
+      msg.body = """
+      From: %s &lt;%s&gt;
+      %s
+      """ % (form.name.data, form.email.data, form.message.data)
+      mail.send(msg)
+ 
+      return render_template('foto.html', success=True)
+ 
+  elif request.method == 'GET':
+    return render_template('foto.html', form=form)
+
+ 
+
+
+
 
 
 
