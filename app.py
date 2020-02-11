@@ -4,16 +4,18 @@ from forms import ContactForm
 from flask_mail import Message, Mail
 import os
 
+
 mail = Mail()
 app = Flask(__name__)
 app.config.from_object(Configuration)
 app.secret_key = '1580208980-7d702e450c96ee352e41d401c014b0d07b9124de'
 
-app.config["MAIL_SERVER"] = "smtp.yandex.ru"
-app.config["MAI_PORT"] = 465
-app.config["MAIL_USE_SSL"] = True
-app.config["MAIL_USERNAME"] = 'nesterovish@yandex.ru'
-app.config["MAIL_PASSWORD"] = 'Vitalina84'
+app.config["MAIL_SERVER"] = "smtp.gmail.com"
+app.config["MAI_PORT"] = 587
+app.config["MAIL_USE_TLS"] = False
+app.config["MAIL_USE_SSL"]= True
+app.config["MAIL_USERNAME"] = 'nesterovish84@gmail.com'
+app.config["MAIL_PASSWORD"] = 'Lokomotiv1'
  
 mail.init_app(app)
 

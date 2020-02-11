@@ -86,21 +86,25 @@
   <form action="{{ url_for('index') }}" method=post>
     {{ form.hidden_tag() }}
  
-    {{ form.name.label }}
-    {{ form.name }}
+   <label class="col-form-label"> {{ form.name.label }}</label>
+     <div class="form-control" type="text"> {{ form.name }}</div>
  
-    {{ form.email.label }}
-    {{ form.email }}
+    <label class="col-form-label">{{ form.email.label }}</label>
+    <div class="form-control" type="email">{{ form.email }}</div>
  
-    {{ form.subject.label }}
-    {{ form.subject }}
+    <label class="col-form-label">{{ form.subject.label }}</label>
+    <div class="form-control" type="text"> {{ form.subject }}</div>
  
-    {{ form.message.label }}
-    {{ form.message }}
+    <label class="col-form-label">{{ form.message.label }}</label>
+    <div class="form-control" type="text"> {{ form.message }}</div>
+ </div>
+    
  
-    {{ form.submit }}
-  </form>
-
+<div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary">{{ form.submit }}</button>
+      </div>
+       </form>
   {% if success %}
     <p>Thank you for your message. Well get back to you shortly.</p>
  
@@ -123,11 +127,6 @@
     {% endfor %}
    {% endif %} 
 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-        <button type="button" class="btn btn-primary">Отправить</button>
-      </div>
     </div>
   </div>
 </div>
