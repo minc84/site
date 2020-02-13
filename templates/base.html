@@ -173,14 +173,17 @@
 <section>
     <div class='container footer'>
         <div class="row">
-            <div class="cont" id="part2"><h2>Контакты</h2></div>
+            <div class="cont " id="part2"><h2>Контакты</h2></div>
         </div>
 <div class="row">
     <div class="col-xl-3">
-
-<div class="form-group ">
+<form action="{{ url_for('index') }}" method=post>
+    {{ form.hidden_tag() }}
+  
+  <div class="form-group ">
             <label for="message" >Сообщение</label>
-            <textarea id="message" class="form-control" rows="5" placeholder="Введите сообщение" required></textarea>
+            <label class="col-form-label">{{ form.message.label }}</label>
+    <div class="form-control" type="text"> {{ form.message }}</div>
         </div>
         <button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right ">Отправить</button>
 
@@ -189,19 +192,19 @@
         <div class="col-xl-3">
               <div class="form-group">
                 
-                <label for="name" >Имя</label>
-                <input type="text" class="form-control" id="name" placeholder="Ваше имя" required>
+                <label class="col-form-label"> {{ form.name.label }}</label>
+     <div class="form-control" type="text"> {{ form.name }}</div>
             </div>
 
 <div class="form-group">
                 
-                <label for="phone" >Ваш телефон</label>
-                <input type="text" class="form-control" id="phone" placeholder="Введите телефон" required>
+                <label class="col-form-label">{{ form.subject.label }}</label>
+    <div class="form-control" type="text"> {{ form.subject }}</div>
             </div>
 
             <div class="form-group">
-                <label for="email" >Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Введите email" required>
+               <label class="col-form-label">{{ form.email.label }}</label>
+    <div class="form-control" type="email">{{ form.email }}</div>
             </div>
         
         </div>
@@ -210,7 +213,7 @@
         </div>
 
 </div>
-            
+</form>            
 
 <div class="row foot">
     

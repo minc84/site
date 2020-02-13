@@ -54,7 +54,7 @@
     <div class='container volna'>
         <div class="row">
             <div class="col-xl-4">
-                <h3> Портфолио </h3>
+                <h3 class="text-info"> Портфолио </h3>
                 <p>Каждый заказ требует индивидуального подхода в проектировании и исполнении, поскольку пожелания клиентов в совокупности с ландшафтными особенностями обустраевомой территории уникальны.
 Благодаря многолетнему опыту в строительстве я точно знаю, как совместить красоту и функциональность. 
 Именно поэтому мои проекты отличаются практичностью, надежностью в эксплуатации, гарантией качества и довольными клиентами.</p>
@@ -91,24 +91,27 @@
 </div>
             </div>
         </div>
-        <div class="row justify-content-between"><h3>Отзывы</h3></div>
+        <div class="row justify-content-between text-info"><h3>Отзывы</h3></div>
         <div class="row justify-content-between">
             
-                    <div class="col-xl-3 otziv">
-                     <img src="{{ url_for("static", filename="images/cicle1.png") }}" class="img-thumbnail img-face rounded-circle" alt="">
-                     <h3 class="otziv__h3">Имя</h3>
-                   <p>Олег оформил дорожки на моем загородном участке. 
+                    <div class="col-xl-3 otziv text-left">
+                     <img src="{{ url_for("static", filename="images/cicle1.png") }}" class="img-thumbnail  rounded-circle" alt="">
+                     <h3 class="otziv__h3">Ольга</h3>
+                     <p class = "otziv__dolg">предприниматель<p>
+                   <p class ='otziv__text' >Олег оформил дорожки на моем загородном участке. 
 Мою идею воплотил в жизнь оптимально. Всю работу выполнил качественно и достаточно быстро. На моем участке есть что еще делать, обязательно обращусь к Олегу.</p>
                  </div>
                  <div class="col-xl-3 otziv">
-                     <img src="{{ url_for("static", filename="images/cicle2.png") }}" class="img-thumbnail img-face rounded-circle" alt="">
+                     <img src="{{ url_for("static", filename="images/cicle2.png") }}" class="img-thumbnail  rounded-circle" alt="">
                     <h3 class="otziv__h3">Имя</h3> 
-<p>Я захотела английский сад, чтобы минимум ухода. А еще прудик с беседкой. Главным для меня было найти надежного человека, который все сделает  качественно,  чтобы не тратить время на контроль. С Олегом все получилось, работой я довольна </p>
+                     <p class = "otziv__dolg">бренд-менеджер<p>
+<p class ='otziv__text'>Я захотела английский сад, чтобы минимум ухода. А еще прудик с беседкой. Главным для меня было найти надежного человека, который все сделает  качественно,  чтобы не тратить время на контроль. С Олегом все получилось, работой я довольна </p>
                  </div>
                  <div class="col-xl-3 otziv">
-                    <img src="{{ url_for("static", filename="images/cicle3.png") }}" class="img-thumbnail img-face rounded-circle" alt="">
+                    <img src="{{ url_for("static", filename="images/cicle3.png") }}" class="img-thumbnail  rounded-circle" alt="">
                 <h3 class="otziv__h3">Имя</h3>
-                <p>Мне, как человеку технического склада ума, нужны были готовые идеи и предложения. Олег сделал 3D-визуализацию, и она мне понравилась. От меня потребовалось только принять работу. И заплатить.</p>
+                 <p class = "otziv__dolg">бренд-менеджер<p>
+                <p class ='otziv__text'>Мне, как человеку технического склада ума, нужны были готовые идеи и предложения. Олег сделал 3D-визуализацию, и она мне понравилась. От меня потребовалось только принять работу. И заплатить.</p>
                  </div>
              </div>
         </div> 

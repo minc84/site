@@ -131,7 +131,11 @@ z-index: 5;
 .foto{
 padding: 50px ;	
 }
-.img-face{
-	width: 400px;
-	height: 400px;
+.otziv__text{
+	font-family: "Avenir Next Cyr";
+	font-size: 14px;
+}	
+.otziv__dolg{
+	font-family:'AvenirNextCyr Bold';
+	font-size: 18px;
 }
