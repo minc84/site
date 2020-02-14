@@ -51,7 +51,7 @@
                     <div class='header__title'>Олег Мицкевич</div>
 
                     <div class='header__title1'>декоративные  водоемы</div>
-                    <p class='header__text'> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, amet.</p>
+                    <p class='header__text'> от идеи до воплощения</p>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
                         оставить сообщение
                         <!--слайдер -->
@@ -173,15 +173,17 @@
 <section>
     <div class='container footer'>
         <div class="row">
-            <div class="cont " id="part2"><h2>Контакты</h2></div>
+            <div class="cont text-info" id="part2"><h2>Контакты</h2></div>
+           
         </div>
+        <div class="row justify-content-between text__svyaz "><h6>Свяжитесь со мной любым удобным для Вас способом!</h6></div>
 <div class="row">
     <div class="col-xl-3">
 <form action="{{ url_for('index') }}" method=post>
     {{ form.hidden_tag() }}
   
   <div class="form-group ">
-            <label for="message" >Сообщение</label>
+            
             <label class="col-form-label">{{ form.message.label }}</label>
     <div class="form-control" type="text"> {{ form.message }}</div>
         </div>
@@ -215,7 +217,8 @@
 </div>
 </form>            
 
-<div class="row foot">
+</div>
+<div class="row foot ">
     
     <div class="col-xl-3">
         <img src="{{ url_for("static", filename="images/logo.png") }}" alt="" class='logo'></div>
