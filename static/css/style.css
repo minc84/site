@@ -9,7 +9,7 @@ z-index: 0;
 .banner{
 background-image: url('../images/f1.png');
 background-repeat: no-repeat;
-background-size: contain; /* Масштабируем фон */
+background-size:  100% 95% ; /* Масштабируем фон */
 z-index: 5;
 	
 }
@@ -18,6 +18,12 @@ ul, li {
 	display: block;
 	padding: 0;
 	margin: 0;
+}
+
+.mick{
+	
+	padding: 20px 10px;
+	
 }
 
 .menu-bar{
@@ -46,11 +52,12 @@ color: #252726; /* цвет текса в меню в теги а */
 	font-size: 34px;
 	color: #feffff;
 	padding: 0px 10px 5px; 
+	text-transform: uppercase;
 }
 
 .header__title1{
 	font-family:'AvenirNextCyr Demi';
-	font-size: 30px;
+	font-size: 26px;
 	text-transform: uppercase;
 	color: #2d4461;
 	padding: 0px 10px 0px; 
@@ -58,9 +65,10 @@ color: #252726; /* цвет текса в меню в теги а */
 
 .header__text{
 	font-family:'AvenirNextCyr Demi';
-	font-size: 14px;
+	font-size: 20px;
 	text-transform: uppercase;
 	color: #375376;
+
 	padding: 0px 5px 0px; 
 }
 
@@ -148,6 +156,8 @@ padding: 50px ;
 .text__svyaz{
 	color: #375376;
 }
+}
+
 
 /* Contact form */
 form label {
