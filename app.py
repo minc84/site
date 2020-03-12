@@ -10,11 +10,11 @@ app = Flask(__name__)
 app.config.from_object(Configuration)
 app.secret_key = '1580208980-7d702e450c96ee352e41d401c014b0d07b9124de'
 
-app.config["MAIL_SERVER"] = "smtp.gmail.com"
-app.config["MAI_PORT"] = 587
+app.config["MAIL_SERVER"] = "mail.greenarea.by"
+app.config["MAI_PORT"] = 25
 app.config["MAIL_USE_TLS"] = False
-app.config["MAIL_USE_SSL"]= True
-app.config["MAIL_USERNAME"] = 'nesterovish84@gmail.com'
+app.config["MAIL_USE_SSL"]= False
+app.config["MAIL_USERNAME"] = 'info@greenarea.by'
 app.config["MAIL_PASSWORD"] = 'Lokomotiv1'
  
 mail.init_app(app)
@@ -29,14 +29,14 @@ def index():
       flash('All fields are required.')
       return render_template('index.html', form=form)
     else:
-      msg = Message(form.subject.data, sender='contact@example.com', recipients=['nesterovish@yandex.ru'])
+      msg = Message(form.subject.data, sender='info@greenarea.by', recipients=['info@greenarea.by'])
       msg.body = """
       From: %s &lt;%s&gt;
       %s
       """ % (form.name.data, form.email.data, form.message.data)
       mail.send(msg)
  
-      return render_template('index.html', success=True)
+      return render_template('foto.html', success=True)
  
   elif request.method == 'GET':
     return render_template('index.html', form=form)
@@ -50,7 +50,7 @@ def foto():
       flash('All fields are required.')
       return render_template('foto.html', form=form)
     else:
-      msg = Message(form.subject.data, sender='contact@example.com', recipients=['nesterovish@yandex.ru'])
+      msg = Message(form.subject.data, sender='info@greenarea.by', recipients=['info@greenarea.by'])
       msg.body = """
       From: %s &lt;%s&gt;
       %s

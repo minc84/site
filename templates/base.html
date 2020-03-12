@@ -67,6 +67,12 @@
         </button>
       </div>
       <div class="modal-body">
+        {% block forma %}
+    
+  {% if success %}
+    <p>Спасибо за Ваше сообщение!</p>
+ 
+  {% else %}
 
  {% for message in form.name.errors %}
     <div class="flash">{{ message }}</div>
@@ -84,26 +90,9 @@
     <div class="flash">{{ message }}</div>
   {% endfor %}
    
-  <form action="{{ url_for('index') }}" method=post>
-    {{ form.hidden_tag() }}
- 
-    {% for message in form.name.errors %}
-    <div class="flash">{{ message }}</div>
-  {% endfor %}
- 
-  {% for message in form.email.errors %}
-    <div class="flash">{{ message }}</div>
-  {% endfor %}
- 
-  {% for message in form.subject.errors %}
-    <div class="flash">{{ message }}</div>
-  {% endfor %}
- 
-  {% for message in form.message.errors %}
-    <div class="flash">{{ message }}</div>
-  {% endfor %}
-   
-  <form action="{{ url_for('index') }}" method=post>
+  <form action="{{ url_for('index') }}" method="post">
+    {{ form.hidden_tag() }}  
+
     {{ form.hidden_tag() }}
  
     {{ form.name.label }}
@@ -117,6 +106,7 @@
  
    {{ form.message.label }}
      {{ form.message }}
+      
  </div>
     
  
@@ -125,28 +115,8 @@
         {{ form.submit }}
       </div>
        </form>
-  {% if success %}
-    <p>Thank you for your message. Well get back to you shortly.</p>
- 
-  {% else %}
- 
-    {% for message in form.name.errors %}
-      <div class="flash">{{ message }}</div>
-    {% endfor %}
- 
-    {% for message in form.email.errors %}
-      <div class="flash">{{ message }}</div>
-    {% endfor %}
- 
-    {% for message in form.subject.errors %}
-      <div class="flash">{{ message }}</div>
-    {% endfor %}
- 
-    {% for message in form.message.errors %}
-      <div class="flash">{{ message }}</div>
-    {% endfor %}
-   {% endif %} 
-
+       {% endif %}
+  {% endblock %}
     </div>
   </div>
 </div>
