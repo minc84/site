@@ -36,7 +36,7 @@ def index():
       """ % (form.name.data, form.email.data, form.message.data)
       mail.send(msg)
  
-      return render_template('foto.html', success=True)
+      return render_template('index.html', success=True)
  
   elif request.method == 'GET':
     return render_template('index.html', form=form)

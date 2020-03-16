@@ -8,3 +8,4 @@ class ContactForm(FlaskForm):
   subject = TextField("Телефон",  [validators.Required("Please enter a subject.")])
   message = TextAreaField("Сообщение",  [validators.Required("Please enter a message.")])
   submit = SubmitField("Отправить")
+ 
